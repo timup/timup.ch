@@ -1,5 +1,7 @@
 # timup.ch
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/0fb0457c-ecd9-4b0d-ade8-d449a4829f28/deploy-status)](https://app.netlify.com/sites/timupch/deploys)
+
 A personal website built with [Gatsby](https://www.gatsbyjs.org/), and [Netlify CMS](https://www.netlifycms.org).
 
 The initial structure was inspirired by [gatsby-portfolio-dev](https://github.com/smakosh/gatsby-portfolio-dev) by [@smakosh](https://github.com/smakosh).
