@@ -25,5 +25,4 @@ Testimonials.propTypes = {
   ),
 }
 
-
 export default Testimonials

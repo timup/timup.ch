@@ -13,10 +13,10 @@ export default class IndexPage extends React.Component {
     return (
       <Layout>
         <SEO />
-        <Intro />        
+        <Intro />
         {/* <Projects /> */}
-		    <Skills />
-		    <Contact />
+        <Skills />
+        <Contact />
         <section className="section">
           <div className="container">
             <div className="content">

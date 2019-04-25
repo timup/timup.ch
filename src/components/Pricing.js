@@ -26,7 +26,6 @@ const Pricing = ({ data }) => (
   </div>
 )
 
-
 Pricing.propTypes = {
   data: PropTypes.arrayOf(
     PropTypes.shape({

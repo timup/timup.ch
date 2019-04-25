@@ -20,7 +20,6 @@ class TagRoute extends React.Component {
       totalCount === 1 ? '' : 's'
     } tagged with “${tag}”`
 
-    
     return (
       <Layout>
         <section className="section">
