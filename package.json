@@ -52,10 +52,10 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "start": "npm run develop",
+    "start": "yarn develop",
     "clean": "rimraf .cache public",
-    "build": "npm run clean && gatsby build",
-    "develop": "npm run clean && gatsby develop -o",
+    "build": "yarn clean && gatsby build",
+    "develop": "yarn clean && gatsby develop -o",
     "serve": "gatsby serve",
     "format": "prettier --write \"src/**/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
