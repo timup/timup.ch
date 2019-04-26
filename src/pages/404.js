@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout, SEO } from 'Components';
+import { Layout, Head } from 'Components';
 
 export default () => (
   <Layout>
