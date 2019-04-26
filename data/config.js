@@ -11,7 +11,7 @@ module.exports = {
     linkedin: 'https://www.linkedin.com/in/timupchurch/',
     instagram: 'https://instagram.com/tim.upchurch',
   },
-  googleAnalyticsID: 'UA-139133856-1',
+  googleAnalyticsID: `${process.env.GOOGLE_ANALYTICS_ID}`,
   themeColor: '#6b63ff',
   backgroundColor: '#6b63ff',
   social: {
