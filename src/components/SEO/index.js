@@ -1,6 +1,6 @@
-import React from 'react'
-import Helmet from 'react-helmet'
-import Thumbnail from 'Static/thumbnail/thumbnail.png'
+import React from 'react';
+import Helmet from 'react-helmet';
+import Thumbnail from 'Static/thumbnail/thumbnail.png';
 
 import {
   url,
@@ -13,7 +13,7 @@ import {
   legalName,
   foundingDate,
   logo,
-} from 'Data'
+} from 'Data';
 
 export const SEO = ({
   title = defaultTitle,
@@ -52,7 +52,7 @@ export const SEO = ({
 			"${socialLinks.instagram}",
 			"${socialLinks.github}"
 		]
-      }`
+      }`;
 
   return (
     <Helmet>
@@ -97,5 +97,5 @@ export const SEO = ({
 
       <script type="application/ld+json">{organizationStructuredData}</script>
     </Helmet>
-  )
-}
+  );
+};

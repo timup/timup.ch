@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 // import { Footer } from 'Components'
-import { Global } from './styles'
+import { Global } from './styles';
 
 export const Layout = ({ children }) => (
   <>
@@ -9,4 +9,4 @@ export const Layout = ({ children }) => (
 
     {/* <Footer /> */}
   </>
-)
+);
