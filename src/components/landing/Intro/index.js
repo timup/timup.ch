@@ -4,7 +4,7 @@ import React from 'react'
 import { Wrapper } from './styles'
 
 export const Intro = () => (
-	<Wrapper>
-		<h1>Intro Component</h1>
-	</Wrapper>
+  <Wrapper>
+    <h1>Intro Component</h1>
+  </Wrapper>
 )
