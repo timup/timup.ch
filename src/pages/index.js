@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 
-import { Layout, SEO } from 'Components';
+import { Layout, Head } from 'Components';
 import { Intro } from 'Components/landing';
 
 export default class IndexPage extends React.Component {
@@ -12,7 +12,7 @@ export default class IndexPage extends React.Component {
 
     return (
       <Layout>
-        <SEO />
+        <Head />
         <Intro />
       </Layout>
     );

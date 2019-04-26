@@ -3,5 +3,5 @@ export * from './Layout';
 // export * from './Button'
 // export * from './Card'
 // export * from './Input'
-export * from './SEO';
+export * from './Head';
 export * from './Content';
