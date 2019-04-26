@@ -9,7 +9,7 @@ module.exports = {
 		twitter: 'http://www.twitter.com/timupch',
 		github: 'https://github.com/timup',
 		linkedin: 'https://www.linkedin.com/in/timupchurch/',
-		instagram: 'https://instagram.com/tim.upchurch'
+		instagram: 'https://instagram.com/tim.upchurch',
 	},
 	googleAnalyticsID: '',
 	themeColor: '#6b63ff',
@@ -24,9 +24,8 @@ module.exports = {
 		zipCode: 'ZipCode',
 	},
 	contact: {
-		email: 'email',
-		phone: 'phone number',
+		email: 'mail@timup.ch',
 	},
 	foundingDate: '2019',
-	recaptcha_key: '6Lcs6lQUAAAAAEwhNH2IsobIe2csdda4TT4rQpMN'
+	recaptcha_key: '6Lcs6lQUAAAAAEwhNH2IsobIe2csdda4TT4rQpMN',
 }
