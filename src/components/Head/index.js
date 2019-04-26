@@ -15,7 +15,7 @@ import {
   logo,
 } from 'Data'
 
-export default (Head = ({
+export const Head = ({
   title = defaultTitle,
   description = defaultDescription,
   location = '',
@@ -98,4 +98,4 @@ export default (Head = ({
       <script type="application/ld+json">{organizationStructuredData}</script>
     </Helmet>
   )
-})
+}
