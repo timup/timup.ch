@@ -4,10 +4,9 @@ import { graphql } from 'gatsby';
 
 import { Button, Layout } from 'antd';
 
-import { Wrapper } from 'Components';
-import { Intro } from 'Components/landing';
+import Wrapper from '../components/Wrapper';
 
-const { Header, Footer, Sider, Content } = Layout;
+const { Footer, Sider, Content } = Layout;
 
 export default class IndexPage extends React.Component {
   render() {
@@ -16,11 +15,7 @@ export default class IndexPage extends React.Component {
 
     return (
       <Wrapper>
-        <Header />
-        <Content>
-          <Intro />
-        </Content>
-
+        <Content />
         <Button type="primary">STuff</Button>
       </Wrapper>
     );
