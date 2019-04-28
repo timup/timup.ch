@@ -2,8 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 
-import { Layout, Head } from 'Components';
+import { Button, Layout } from 'antd';
+
+import { Wrapper } from 'Components';
 import { Intro } from 'Components/landing';
+
+const { Header, Footer, Sider, Content } = Layout;
 
 export default class IndexPage extends React.Component {
   render() {
@@ -11,10 +15,14 @@ export default class IndexPage extends React.Component {
     const { edges: posts } = data.allMarkdownRemark;
 
     return (
-      <Layout>
-        <Head />
-        <Intro />
-      </Layout>
+      <Wrapper>
+        <Header />
+        <Content>
+          <Intro />
+        </Content>
+
+        <Button type="primary">STuff</Button>
+      </Wrapper>
     );
   }
 }
