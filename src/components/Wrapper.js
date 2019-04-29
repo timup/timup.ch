@@ -12,10 +12,19 @@ export default class Wrapper extends Component {
         <SubMenu />
       </Menu>
     );
+    const {banner} = this.props;
+
     return (
       <Layout>
         <Head />
-        <Header />
+        <Header
+          style={
+            {
+              // background: '#fff',
+            }
+          }
+        />
+        {banner}
         <Row>
           <Col xxl={4} xl={5} lg={6} md={24} sm={24} xs={24}>
             <Affix>{menuChild}</Affix>
