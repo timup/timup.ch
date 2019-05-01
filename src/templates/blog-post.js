@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import { kebabCase } from 'lodash';
 import Helmet from 'react-helmet';
 import { graphql, Link } from 'gatsby';
-import { Layout, Content, HTMLContent } from 'Components';
+import { Content, HTMLContent } from 'Components';
+import Wrapper from '../components/Wrapper';
 
 export const BlogPostTemplate = ({
   content,
@@ -57,12 +58,12 @@ const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data;
 
   return (
-    <Layout>
+    <Wrapper>
       <BlogPostTemplate
         content={post.html}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
-        helmet={
+        helmet={(
           <Helmet titleTemplate="%s | Blog">
             <title>{`${post.frontmatter.title}`}</title>
             <meta
@@ -70,11 +71,11 @@ const BlogPost = ({ data }) => {
               content={`${post.frontmatter.description}`}
             />
           </Helmet>
-        }
+)}
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
       />
-    </Layout>
+    </Wrapper>
   );
 };
 

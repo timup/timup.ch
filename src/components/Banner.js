@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Row, Col } from 'antd';
 
+import bannerImage from 'Static/illustrations/contact.svg';
+
 export default class Banner extends Component {
   render() {
     return (
@@ -13,12 +15,15 @@ export default class Banner extends Component {
           minHeight: 280,
         }}
       >
-        <Col xxl={4} xl={5} lg={6} md={0} sm={0} xs={0} />
-        <Col xxl={8} xl={7} lg={6} md={24} sm={24} xs={24}>
-          <h1>Col1</h1>
+        <Col xxl={4} xl={4} lg={6} md={0} sm={0} xs={0} />
+        <Col xxl={10} xl={10} lg={9} md={24} sm={24} xs={24}>
+          <div className="banner-heading">Hi, and welcome to timup.ch!</div>
+          <div className="banner-subheading">
+            The personal portfolio of Tim Upchurch
+          </div>
         </Col>
-        <Col xxl={12} xl={12} lg={12} md={24} sm={24} xs={24}>
-          <h1>Col2</h1>
+        <Col xxl={10} xl={10} lg={9} md={24} sm={24} xs={24}>
+          <img src={bannerImage} />
         </Col>
       </Row>
     );
