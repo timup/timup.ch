@@ -83,7 +83,7 @@ const Head = ({ data }) => (
     <meta property="og:image" content={Thumbnail} />
     <meta property="og:title" content={data.site.siteMetadata.title} />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={`${url}${location}/?ref=timup.ch`} />
+    <meta property="og:url" content={`${url}/?ref=timup.ch`} />
 
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:creator" content={socialLinks.twitter} />
