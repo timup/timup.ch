@@ -17,7 +17,7 @@ export default class Banner extends Component {
       >
         <Col xxl={4} xl={4} lg={6} md={0} sm={0} xs={0} />
         <Col xxl={10} xl={10} lg={9} md={24} sm={24} xs={24}>
-          <div className="banner-heading">Hi, and welcome to timup.ch!</div>
+          <div className="banner-heading">hello world 🏴</div>
           <div className="banner-subheading">
             The personal portfolio of Tim Upchurch
           </div>

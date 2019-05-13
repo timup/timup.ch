@@ -7,10 +7,10 @@ const { SubMenu } = Menu;
 
 export default class Wrapper extends Component {
   render() {
-    const menuChild = (
+    const sideMenu = (
       <Menu mode="inline" inlineIndent="40">
         <SubMenu
-          key="sub1"
+          key="introduction"
           title={(
             <span>
               <Icon type="home" />
@@ -18,17 +18,17 @@ export default class Wrapper extends Component {
             </span>
 )}
         >
-          <Menu.Item key="1">Preface</Menu.Item>
-          <Menu.Item key="2">On Development</Menu.Item>
-          <Menu.Item key="3">On Design</Menu.Item>
-          <Menu.Item key="4">Acknowledgements</Menu.Item>
+          <Menu.Item key="preface">Preface</Menu.Item>
+          <Menu.Item key="on-development">On Development</Menu.Item>
+          <Menu.Item key="on-design">On Design</Menu.Item>
+          <Menu.Item key="acknowledgements">Acknowledgements</Menu.Item>
         </SubMenu>
-        <Menu.Item key="1">
+        <Menu.Item key="resume">
           <Icon type="solution" />
           Resume
         </Menu.Item>
         <SubMenu
-          key="sub2"
+          key="work"
           title={(
             <span>
               <Icon type="laptop" />
@@ -40,7 +40,7 @@ export default class Wrapper extends Component {
           <Menu.Item key="2">Option 2</Menu.Item>
         </SubMenu>
         <SubMenu
-          key="sub3"
+          key="projects"
           title={(
             <span>
               <Icon type="experiment" />
@@ -48,11 +48,11 @@ export default class Wrapper extends Component {
             </span>
 )}
         >
-          <Menu.Item key="1">Option 1</Menu.Item>
-          <Menu.Item key="4">Option 4</Menu.Item>
+          <Menu.Item key="raleigh-beach">Raleigh Beach</Menu.Item>
+          <Menu.Item key="identity-project">The Identity Project</Menu.Item>
         </SubMenu>
         <SubMenu
-          key="sub4"
+          key="reading"
           title={(
             <span>
               <Icon type="read" />
@@ -64,7 +64,7 @@ export default class Wrapper extends Component {
           <Menu.Item key="4">Option 4</Menu.Item>
         </SubMenu>
         <SubMenu
-          key="sub5"
+          key="articles"
           title={(
             <span>
               <Icon type="form" />
@@ -72,8 +72,9 @@ export default class Wrapper extends Component {
             </span>
 )}
         >
-          <Menu.Item key="1">Option 1</Menu.Item>
-          <Menu.Item key="4">Option 4</Menu.Item>
+          <Menu.Item key="shared-components-jwt">
+            Shared Components with JWT Authorization
+          </Menu.Item>
         </SubMenu>
       </Menu>
     );
@@ -90,6 +91,7 @@ export default class Wrapper extends Component {
         <Header
           style={{
             background: '#fff',
+            padding: '0 24px 0 40px',
           }}
         >
           <div className="title" style={{ float: 'left' }}>
@@ -98,7 +100,7 @@ export default class Wrapper extends Component {
           <Menu
             theme="light"
             mode="horizontal"
-            style={{ lineHeight: '64px', float: 'right', minHeight: '100vh' }}
+            style={{ lineHeight: '64px', float: 'right' }}
           >
             <Menu.Item key="home">Home</Menu.Item>
             <Menu.Item key="about">About</Menu.Item>
@@ -108,7 +110,7 @@ export default class Wrapper extends Component {
         {banner}
         <Row>
           <Col xxl={4} xl={4} lg={6} md={24} sm={24} xs={24}>
-            <Affix>{menuChild}</Affix>
+            <Affix>{sideMenu}</Affix>
           </Col>
           <Col xxl={20} xl={20} lg={18} md={24} sm={24} xs={24}>
             {this.props.children}
