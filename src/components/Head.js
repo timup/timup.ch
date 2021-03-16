@@ -96,6 +96,7 @@ const Head = ({ data }) => (
     <meta name="twitter:title" content={data.site.siteMetadata.title} />
 
     <script type="application/ld+json">{organizationStructuredData}</script>
+    <script src="https://unpkg.com/embeddable-nfts/dist/nft-card.min.js"></script>
   </Helmet>
 );
 

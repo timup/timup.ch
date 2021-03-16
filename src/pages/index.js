@@ -6,6 +6,7 @@ import { Button, Layout, Row, Col, Typography, Breadcrumb } from 'antd';
 import developmentImage from 'Static/illustrations/contact.svg';
 import Banner from '../components/Banner';
 import Wrapper from '../components/Wrapper';
+import Head from '../components/Head';
 
 const { Footer, Sider, Content } = Layout;
 const { Title, Paragraph, Text } = Typography;
@@ -25,11 +26,17 @@ export default class IndexPage extends React.Component {
           background: '#fff',
         }}
       >
+        <Head />
         <h1>Tim Upchurch</h1>
         <p>
           <em>Live, and on the internet!</em>
         </p>
-      
+
+        <br />
+        <br />
+        <nft-card contractAddress="0x60f80121c31a0d46b5279700f9df786054aa5ee5" tokenId="460474"> </nft-card> 
+        <br />
+        <nft-card contractAddress="0xd07dc4262bcdbf85190c01c996b4c06a461d2430" tokenId="315282"> </nft-card>
       </Layout>
 
       // <>
