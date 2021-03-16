@@ -30,7 +30,6 @@ export default class IndexPage extends React.Component {
           <em>Live, and on the internet!</em>
         </p>
       
-      <nft-card contractAddress="0x60f80121c31a0d46b5279700f9df786054aa5ee5" tokenId="460474"> </nft-card> <script src="https://unpkg.com/embeddable-nfts/dist/nft-card.min.js"></script>
       </Layout>
 
       // <>
