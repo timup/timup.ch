@@ -78,5 +78,8 @@
   "repository": {
     "type": "git",
     "url": "git@github.com:timup/timup.ch.git"
+  },
+  "engines": {
+    "node": "10.* || >= 12"
   }
 }
