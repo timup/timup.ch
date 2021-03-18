@@ -21,10 +21,12 @@ export default class IndexPage extends React.Component {
           alignItems: 'center',
           justifyContent: 'center',
           textAlign: 'center',
-          height: '100vh',
+          height: '100%',
+          minHeight: '100vh',
           background: '#fff',
-          paddingTop: '24px',
-          paddingBottom: '24px',
+          paddingTop: '96px',
+          paddingBottom: '96px',
+          overflow: 'auto',
         }}
       >
         <Head />
@@ -36,7 +38,6 @@ export default class IndexPage extends React.Component {
         <br />
         <br />
         <div style={{ maxWidth: '720px' }}>
-          
           <nft-card
             contractAddress="0xd07dc4262bcdbf85190c01c996b4c06a461d2430"
             tokenId="329978"
