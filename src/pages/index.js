@@ -1,3 +1,4 @@
+/* eslint-disable react/prefer-stateless-function */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
@@ -13,8 +14,6 @@ const { Title, Paragraph, Text } = Typography;
 
 export default class IndexPage extends React.Component {
   render() {
-    const { data } = this.props;
-
     return (
       <Layout
         style={{
@@ -24,6 +23,8 @@ export default class IndexPage extends React.Component {
           textAlign: 'center',
           height: '100vh',
           background: '#fff',
+          paddingTop: '24px',
+          paddingBottom: '24px',
         }}
       >
         <Head />
@@ -34,9 +35,23 @@ export default class IndexPage extends React.Component {
 
         <br />
         <br />
-        <nft-card contractAddress="0x60f80121c31a0d46b5279700f9df786054aa5ee5" tokenId="460474"> </nft-card> 
-        <br />
-        <nft-card contractAddress="0xd07dc4262bcdbf85190c01c996b4c06a461d2430" tokenId="315282"> </nft-card>
+        <div style={{ maxWidth: '720px' }}>
+          
+          <nft-card
+            contractAddress="0xd07dc4262bcdbf85190c01c996b4c06a461d2430"
+            tokenId="329978"
+          ></nft-card>
+          <br />
+          <nft-card
+            contractAddress="0xd07dc4262bcdbf85190c01c996b4c06a461d2430"
+            tokenId="315282"
+          ></nft-card>
+          <br />
+          <nft-card
+            contractAddress="0x60f80121c31a0d46b5279700f9df786054aa5ee5"
+            tokenId="460474"
+          ></nft-card>
+        </div>
       </Layout>
 
       // <>
