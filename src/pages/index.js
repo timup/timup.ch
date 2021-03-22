@@ -40,6 +40,11 @@ export default class IndexPage extends React.Component {
         <div style={{ maxWidth: '720px' }}>
           <nft-card
             contractAddress="0xd07dc4262bcdbf85190c01c996b4c06a461d2430"
+            tokenId="360238"
+          ></nft-card>
+          <br />
+          <nft-card
+            contractAddress="0xd07dc4262bcdbf85190c01c996b4c06a461d2430"
             tokenId="329978"
           ></nft-card>
           <br />
