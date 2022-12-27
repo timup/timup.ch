@@ -34,30 +34,6 @@ export default class IndexPage extends React.Component {
         <p>
           <em>Live, and on the internet!</em>
         </p>
-
-        <br />
-        <br />
-        <div style={{ maxWidth: '720px' }}>
-          <nft-card
-            contractAddress="0xd07dc4262bcdbf85190c01c996b4c06a461d2430"
-            tokenId="360238"
-          ></nft-card>
-          <br />
-          <nft-card
-            contractAddress="0xd07dc4262bcdbf85190c01c996b4c06a461d2430"
-            tokenId="329978"
-          ></nft-card>
-          <br />
-          <nft-card
-            contractAddress="0xd07dc4262bcdbf85190c01c996b4c06a461d2430"
-            tokenId="315282"
-          ></nft-card>
-          <br />
-          <nft-card
-            contractAddress="0x60f80121c31a0d46b5279700f9df786054aa5ee5"
-            tokenId="460474"
-          ></nft-card>
-        </div>
       </Layout>
 
       // <>
