@@ -8,7 +8,7 @@ jobs:
   build:
     docker:
       # Specify the next-gen image
-      - image: cimg/node
+      - image: cimg/node:23.3.0
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
