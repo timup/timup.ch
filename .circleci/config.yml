@@ -1,30 +1,31 @@
-# Javascript Node CircleCI 2.0 configuration file
+# JavaScript Node CircleCI Configuration File
 #
+# Updated to use next-gen convenience images
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 #
 version: 2
 jobs:
   build:
     docker:
-      # specify the version you desire here
-      - image: circleci/node:8.10.0
+      # Specify the next-gen image
+      - image: cimg/node:8.10
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/mongo:3.4.4
+      # For example, to include MongoDB, uncomment the next line:
+      # - image: mongo:3.4.4
 
     working_directory: ~/timup.ch
 
     steps:
       - checkout
 
-      # Download and cache dependencies
+      # Restore and cache dependencies
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
+            - v1-dependencies-{{ checksum "package.json" }}
+            # Fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
 
       - run: yarn install
 
@@ -33,4 +34,5 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
+      # Build the project
       - run: yarn build
