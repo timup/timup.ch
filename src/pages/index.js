@@ -34,7 +34,7 @@ export default class IndexPage extends React.Component {
         <p>
           <em>On the internet!</em>
         </p>
-        <p><a href="timupchurch_resume.pdf">View resume</a></p>
+        <p><a href="resume.pdf">View resume</a></p>
       </Layout>
 
       // <>
