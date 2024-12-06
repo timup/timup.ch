@@ -12,4 +12,4 @@ module.exports = {
     fetch: 1,
     window: 1,
   },
-}
+};

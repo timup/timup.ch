@@ -1,8 +1,7 @@
-import React from 'react';
-import Wrapper from '../components/Wrapper';
+import React from "react";
 
-export default () => (
-  <Wrapper>
-    <h1>NOT FOUND</h1>
-  </Wrapper>
-);
+const NotFoundPage = () => {
+  return <h1>Page not found</h1>;
+};
+
+export default NotFoundPage;

@@ -1,142 +1,35 @@
-const path = require('path');
-const config = require('./data/config');
-
-require('dotenv').config({
-  path: `.env.${process.env.NODE_ENV}`,
-});
-
 module.exports = {
   siteMetadata: {
-    title: config.defaultTitle,
-    description: config.defaultDescription,
-    author: config.author,
+    title: "Gatsby From Scratch",
+    description: "A minimal Gatsby project built without the CLI",
+    author: "@yourhandle",
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-styled-components',
-    'gatsby-plugin-antd',
+    `gatsby-plugin-postcss`,
     {
-      // keep as first gatsby-source-filesystem plugin for gatsby image support
-      resolve: 'gatsby-source-filesystem',
+      resolve: `gatsby-plugin-manifest`,
       options: {
-        path: `${__dirname}/static/images`,
-        name: 'uploads',
+        name: `Tim Upchurch`,       
+        short_name: `timup`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#000000`,
+        display: `standalone`,
+        icon: `static/favicon-32x32.png`, // Path to your favicon
       },
     },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/src/pages`,
-        name: 'pages',
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/src/assets/images`,
-        name: 'images',
-      },
-    },
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-react-helmet-async`,
+    'gatsby-plugin-image',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
-    // {
-    //   resolve: 'gatsby-source-graphql',
-    //   options: {
-    //     typeName: 'GitHub',
-    //     fieldName: 'github',
-    //     url: 'https://api.github.com/graphql',
-    //     headers: {
-    //       Authorization: `bearer ${process.env.GITHUB_TOKEN}`,
-    //     },
-    //     fetchOptions: {},
-    //   },
-    // },
+    'gatsby-transformer-yaml',
     {
-      resolve: 'gatsby-plugin-nprogress',
+      resolve: 'gatsby-source-filesystem',
       options: {
-        color: config.themeColor,
-        showSpinner: false,
+        name: 'projects',
+        path: `${__dirname}/src/data/`,
       },
     },
-    {
-      resolve: 'gatsby-transformer-remark',
-      options: {
-        plugins: [
-          {
-            resolve: 'gatsby-remark-relative-images',
-            options: {
-              name: 'uploads',
-            },
-          },
-          {
-            resolve: 'gatsby-remark-images',
-            options: {
-              maxWidth: 2048,
-            },
-          },
-          {
-            resolve: 'gatsby-remark-copy-linked-files',
-            options: {
-              destinationDir: 'static',
-            },
-          },
-        ],
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: {
-        trackingId: config.googleAnalyticsID,
-        head: true,
-      },
-    },
-    // {
-    //   resolve: 'gatsby-plugin-favicon',
-    //   options: {
-    //     logo: './static/images/black-flag.png',
-    //     injectHTML: true,
-    //     icons: {
-    //       android: true,
-    //       appleIcon: true,
-    //       appleStartup: true,
-    //       coast: false,
-    //       favicons: true,
-    //       firefox: true,
-    //       twitter: false,
-    //       yandex: false,
-    //       windows: false,
-    //     },
-    //   },
-    // },
-    {
-      resolve: 'gatsby-plugin-manifest',
-      options: {
-        name: config.defaultTitle,
-        short_name: 'starter',
-        start_url: '/',
-        background_color: config.backgroundColor,
-        theme_color: config.themeColor,
-        display: 'minimal-ui',
-        icon: './static/images/black-flag.png',
-      },
-    },
-    {
-      resolve: `gatsby-plugin-alias-imports`,
-      options: {
-        alias: {
-          Components: path.resolve(__dirname, 'src/components'),
-          Common: path.resolve(__dirname, 'src/components/common'),
-          Static: path.resolve(__dirname, 'static/'),
-          Theme: path.resolve(__dirname, 'src/components/theme'),
-          Data: path.resolve(__dirname, 'data/config'),
-        },
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-netlify-cms',
-    },
-    'gatsby-plugin-offline',
-    // 'gatsby-plugin-purgecss', // must be after other CSS plugins
-    'gatsby-plugin-netlify', // make sure to keep it last in the array
   ],
 };
